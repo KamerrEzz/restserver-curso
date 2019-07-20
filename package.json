@@ -1,0 +1,15 @@
+{
+  "name": "cls",
+  "version": "1.0.0",
+  "description": "Aprendido en el curso de node desde cero",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "kamerr ezz",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1"
+  }
+}
