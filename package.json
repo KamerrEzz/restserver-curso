@@ -4,6 +4,7 @@
   "description": "Aprendido en el curso de node desde cero",
   "main": "index.js",
   "scripts": {
+    "start": "node server/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "kamerr ezz",
