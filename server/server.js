@@ -7,16 +7,13 @@ const mongoose = require('mongoose')
 const bodyparser = require('body-parser');
 
 //middlewares
-
 app.use(bodyparser.urlencoded({
     extended: false
 })) //aplicacion/x-www-form-urlencoded
 app.use(bodyparser.json()) //iniciar aplicacion/json
 
-app.use(require('./routes/usuario'))
-
-
-
+// Configuracion de rutas
+app.use(require('./routes/index'))
 
 mongoose.connect(process.env.URLDB, {
     useCreateIndex: true,

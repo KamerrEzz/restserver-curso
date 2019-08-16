@@ -6,8 +6,9 @@ const _ = require('underscore');
 const app = express();
 
 const Usuario = require('../models/usuario');
+const { verific, adminrol } = require('../middleware/auth');
 
-app.get('/usuario', (req, res) => {
+app.get('/usuario', [verific], (req, res) => {
 
 
     let desde = req.query.desde || 0;
@@ -38,7 +39,7 @@ app.get('/usuario', (req, res) => {
         });
 });
 
-app.post('/usuario', (req, res) => {
+app.post('/usuario', [verific, adminrol], (req, res) => {
     let body = req.body
 
     let usuario = new Usuario({
@@ -68,7 +69,7 @@ app.post('/usuario', (req, res) => {
 
 
 });
-app.put('/usuario/:id', (req, res) => {
+app.put('/usuario/:id', [verific, adminrol], (req, res) => {
     let usuarioID = req.params.id
     let body = _.pick(req.body, ["name", "email", "img", "role", "status"])
 
@@ -92,7 +93,7 @@ app.put('/usuario/:id', (req, res) => {
     })
 
 });
-app.delete('/usuario/:id', function(req, res) {
+app.delete('/usuario/:id', [verific, adminrol], (req, res) => {
     
     let id = req.params.id;
     console.log(id);

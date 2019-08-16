@@ -9,6 +9,16 @@ process.env.PORT = process.env.PORT || 3000;
 process.env.NODE_ENV = process.env.NODE_ENV || "dev"
 
 // ==================
+//        CADUCIDAD
+// ==================
+
+
+// ==================
+//        SEED
+// ==================
+
+process.env.SEED = process.env.SEED || 'mi-toke-dev'
+// ==================
 //        DB
 // ==================
 let urldb;
