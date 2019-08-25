@@ -28,3 +28,9 @@ if(process.env.NODE_ENV === "dev"){
     urldb = process.env.MONG_URL
 }
 process.env.URLDB = urldb
+
+// ==================
+//   Google Sesion
+// ==================
+
+process.env.CLIENT_ID = process.env.CLIENT_ID || '130484593207-drd2pkt9g4h3vvo1inv8po3cnp1kkn96.apps.googleusercontent.com';

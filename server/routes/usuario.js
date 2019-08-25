@@ -8,7 +8,7 @@ const app = express();
 const Usuario = require('../models/usuario');
 const { verific, adminrol } = require('../middleware/auth');
 
-app.get('/usuario', [verific], (req, res) => {
+app.get('/usuario',  (req, res) => {
 
 
     let desde = req.query.desde || 0;
