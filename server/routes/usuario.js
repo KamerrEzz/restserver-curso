@@ -17,7 +17,7 @@ app.get('/usuario',  (req, res) => {
     limite = Number(limite)
 
 
-    Usuario.find({status: true}, "name email status")
+    Usuario.find({status: true}, "name email status img")
         .skip(desde)
         .limit(limite)
         .exec((err, usuarios) => {
