@@ -110,7 +110,7 @@ app.delete('/usuario/:id', [verific, adminrol], (req, res) => {
         };
  
         if (!usuarioBorrado) {
-            return res.status(400).json({
+            return res.status(404).json({
                 ok: false,
                 err: {
                     mensaje: "Usuario no encontrado"
